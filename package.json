@@ -1,0 +1,13 @@
+{
+  "devDependencies": {
+    "autoprefixer": "^10.4.21",
+    "postcss": "^8.5.6",
+    "tai,lwindcss": "^3.4.17"
+  },
+"scripts": {
+  "build": "tailwindcss -i ./src/input.css -o ./dist/output.css --minify",
+  "watch": "tailwindcss -i ./src/input.css -o ./dist/output.css --watch"
+}
+
+
+}

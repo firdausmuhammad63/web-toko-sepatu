@@ -1,0 +1,296 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Galeri Sepatu Meksiko - Zapatos México</title>
+  <meta name="description" content="Galeri foto koleksi sepatu Meksiko terlengkap.">
+  <link rel="stylesheet" href="dist/output.css">
+  <script src="https://unpkg.com/alpinejs@3.x.x/dist/cdn.min.js" defer></script>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+</head>
+<body class="bg-gray-50">
+
+    <!-- Navigation -->
+    <nav class="bg-white shadow-lg fixed w-full z-50" x-data="{ open: false }">
+        <div class="max-w-7xl mx-auto px-4">
+            <div class="flex justify-between items-center py-4">
+                <div class="flex items-center">
+                    <i class="fas fa-shoe-prints text-red-600 text-2xl mr-2"></i>
+                    <span class="text-2xl font-bold text-gray-800">Zapatos México</span>
+                </div>
+                
+                <div class="hidden md:flex space-x-8">
+                    <a href="index.html" class="text-gray-700 hover:text-red-600 transition">Beranda</a>
+                    <a href="produk.html" class="text-gray-700 hover:text-red-600 transition">Produk</a>
+                    <a href="tentang.html" class="text-gray-700 hover:text-red-600 transition">Tentang</a>
+                    <a href="galeri.html" class="text-red-600 font-semibold">Galeri</a>
+                    <a href="kontak.html" class="text-gray-700 hover:text-red-600 transition">Kontak</a>
+                </div>
+
+                <button @click="open = !open" class="md:hidden">
+                    <i class="fas fa-bars text-2xl"></i>
+                </button>
+            </div>
+
+            <div x-show="open" class="md:hidden pb-4">
+                <a href="index.html" class="block py-2 text-gray-700 hover:text-red-600">Beranda</a>
+                <a href="produk.html" class="block py-2 text-gray-700 hover:text-red-600">Produk</a>
+                <a href="tentang.html" class="block py-2 text-gray-700 hover:text-red-600">Tentang</a>
+                <a href="galeri.html" class="block py-2 text-red-600 font-semibold">Galeri</a>
+                <a href="kontak.html" class="block py-2 text-gray-700 hover:text-red-600">Kontak</a>
+            </div>
+        </div>
+    </nav>
+
+  <!-- Header -->
+  <section class="pt-24 pb-12 bg-gradient-to-r from-red-600 to-orange-500 text-white">
+    <div class="max-w-7xl mx-auto px-4 text-center">
+      <h1 class="text-4xl font-bold mb-4">Galeri Koleksi</h1>
+      <p class="text-xl opacity-90">Jelajahi keindahan dan keragaman sepatu Meksiko kami</p>
+    </div>
+  </section>
+
+  <!-- Gallery Filter -->
+  <section class="py-8 bg-white shadow-sm">
+    <div class="max-w-7xl mx-auto px-4">
+      <div class="flex flex-wrap justify-center items-center gap-4">
+        <div class="flex flex-wrap gap-4">
+          <button data-filter="all"
+                  class="px-6 py-2 rounded-lg font-semibold transition bg-red-600 text-white">Semua</button>
+
+          <button data-filter="boots"
+                  class="px-6 py-2 rounded-lg font-semibold transition bg-gray-200 text-gray-700">Boots</button>
+
+          <button data-filter="formal"
+                  class="px-6 py-2 rounded-lg font-semibold transition bg-gray-200 text-gray-700">Formal</button>
+
+          <button data-filter="casual"
+                  class="px-6 py-2 rounded-lg font-semibold transition bg-gray-200 text-gray-700">Casual</button>
+
+          <button data-filter="sandal"
+                  class="px-6 py-2 rounded-lg font-semibold transition bg-gray-200 text-gray-700">Sandal</button>
+        </div>
+
+        <!-- Counter -->
+        <div id="gallery-count" class="text-sm text-gray-600 ml-4">Menampilkan 12 dari 12</div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Gallery Grid (pastikan setiap item punya data-gallery-item + data-category + data-gallery-title + data-large-src) -->
+  <section class="py-16">
+    <div class="max-w-7xl mx-auto px-4">
+      <div id="main-gallery" class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4">
+
+        <!-- 1 Boots -->
+        <div class="group cursor-pointer" data-gallery-item data-category="boots" data-gallery-title="Boots Cowboy Klasik"
+             data-large-src="https://images.unsplash.com/photo-1608256246200-53e635b5b65f?w=1200">
+          <div class="relative overflow-hidden rounded-lg shadow-lg">
+            <img src="https://images.unsplash.com/photo-1608256246200-53e635b5b65f?w=400" alt="Boots Cowboy"
+                 class="w-full h-64 object-cover group-hover:scale-110 transition-transform duration-300">
+            <div class="absolute inset-0 bg-black bg-opacity-0 group-hover:bg-opacity-30 transition-all duration-300 flex items-center justify-center">
+              <i class="fas fa-search-plus text-white text-2xl opacity-0 group-hover:opacity-100 transition-opacity duration-300"></i>
+            </div>
+          </div>
+          <p class="text-center mt-2 text-gray-700 font-medium">Boots Cowboy Klasik</p>
+        </div>
+
+        <!-- 2 Formal -->
+        <div class="group cursor-pointer" data-gallery-item data-category="formal" data-gallery-title="Sepatu Formal Premium"
+             data-large-src="https://images.unsplash.com/photo-1560769629-975ec94e6a86?w=1200">
+          <div class="relative overflow-hidden rounded-lg shadow-lg">
+            <img src="https://images.unsplash.com/photo-1560769629-975ec94e6a86?w=400" alt="Sepatu Formal"
+                 class="w-full h-64 object-cover group-hover:scale-110 transition-transform duration-300">
+            <div class="absolute inset-0 bg-black bg-opacity-0 group-hover:bg-opacity-30 transition-all duration-300 flex items-center justify-center">
+              <i class="fas fa-search-plus text-white text-2xl opacity-0 group-hover:opacity-100 transition-opacity duration-300"></i>
+            </div>
+          </div>
+          <p class="text-center mt-2 text-gray-700 font-medium">Sepatu Formal Premium</p>
+        </div>
+
+        <!-- 3 Sandal -->
+        <div class="group cursor-pointer" data-gallery-item data-category="sandal" data-gallery-title="Sandal Huarache Tradisional"
+             data-large-src="https://images.unsplash.com/photo-1551107696-a4b0c5a0d9a2?w=1200">
+          <div class="relative overflow-hidden rounded-lg shadow-lg">
+            <img src="https://images.unsplash.com/photo-1551107696-a4b0c5a0d9a2?w=400" alt="Sandal Huarache"
+                 class="w-full h-64 object-cover group-hover:scale-110 transition-transform duration-300">
+            <div class="absolute inset-0 bg-black bg-opacity-0 group-hover:bg-opacity-30 transition-all duration-300 flex items-center justify-center">
+              <i class="fas fa-search-plus text-white text-2xl opacity-0 group-hover:opacity-100 transition-opacity duration-300"></i>
+            </div>
+          </div>
+          <p class="text-center mt-2 text-gray-700 font-medium">Sandal Huarache Tradisional</p>
+        </div>
+
+        <!-- 4 Boots -->
+        <div class="group cursor-pointer" data-gallery-item data-category="boots" data-gallery-title="Boots Western Premium"
+             data-large-src="https://images.unsplash.com/photo-1549298916-b41d501d3772?w=1200">
+          <div class="relative overflow-hidden rounded-lg shadow-lg">
+            <img src="https://images.unsplash.com/photo-1549298916-b41d501d3772?w=400" alt="Boots Western"
+                 class="w-full h-64 object-cover group-hover:scale-110 transition-transform duration-300">
+            <div class="absolute inset-0 bg-black bg-opacity-0 group-hover:bg-opacity-30 transition-all duration-300 flex items-center justify-center">
+              <i class="fas fa-search-plus text-white text-2xl opacity-0 group-hover:opacity-100 transition-opacity duration-300"></i>
+            </div>
+          </div>
+          <p class="text-center mt-2 text-gray-700 font-medium">Boots Western Premium</p>
+        </div>
+
+        <!-- 5 Casual -->
+        <div class="group cursor-pointer" data-gallery-item data-category="casual" data-gallery-title="Sepatu Casual Meksiko"
+             data-large-src="https://images.unsplash.com/photo-1582588678413-dbf45f4823e9?w=1200">
+          <div class="relative overflow-hidden rounded-lg shadow-lg">
+            <img src="https://images.unsplash.com/photo-1582588678413-dbf45f4823e9?w=400" alt="Sepatu Casual"
+                 class="w-full h-64 object-cover group-hover:scale-110 transition-transform duration-300">
+            <div class="absolute inset-0 bg-black bg-opacity-0 group-hover:bg-opacity-30 transition-all duration-300 flex items-center justify-center">
+              <i class="fas fa-search-plus text-white text-2xl opacity-0 group-hover:opacity-100 transition-opacity duration-300"></i>
+            </div>
+          </div>
+          <p class="text-center mt-2 text-gray-700 font-medium">Sepatu Casual Meksiko</p>
+        </div>
+
+        <!-- 6 Boots (Ankle) -->
+        <div class="group cursor-pointer" data-gallery-item data-category="boots" data-gallery-title="Ankle Boots Wanita"
+             data-large-src="https://images.unsplash.com/photo-1605348532760-6753d2c43329?w=1200">
+          <div class="relative overflow-hidden rounded-lg shadow-lg">
+            <img src="https://images.unsplash.com/photo-1605348532760-6753d2c43329?w=400" alt="Ankle Boots"
+                 class="w-full h-64 object-cover group-hover:scale-110 transition-transform duration-300">
+            <div class="absolute inset-0 bg-black bg-opacity-0 group-hover:bg-opacity-30 transition-all duration-300 flex items-center justify-center">
+              <i class="fas fa-search-plus text-white text-2xl opacity-0 group-hover:opacity-100 transition-opacity duration-300"></i>
+            </div>
+          </div>
+          <p class="text-center mt-2 text-gray-700 font-medium">Ankle Boots Wanita</p>
+        </div>
+
+        <!-- 7 Formal (Kerja) -->
+        <div class="group cursor-pointer" data-gallery-item data-category="formal" data-gallery-title="Sepatu Kerja Premium"
+             data-large-src="https://images.unsplash.com/photo-1571019613454-1cb2f99b2d8b?w=1200">
+          <div class="relative overflow-hidden rounded-lg shadow-lg">
+            <img src="https://images.unsplash.com/photo-1571019613454-1cb2f99b2d8b?w=400" alt="Sepatu Kerja"
+                 class="w-full h-64 object-cover group-hover:scale-110 transition-transform duration-300">
+            <div class="absolute inset-0 bg-black bg-opacity-0 group-hover:bg-opacity-30 transition-all duration-300 flex items-center justify-center">
+              <i class="fas fa-search-plus text-white text-2xl opacity-0 group-hover:opacity-100 transition-opacity duration-300"></i>
+            </div>
+          </div>
+          <p class="text-center mt-2 text-gray-700 font-medium">Sepatu Kerja Premium</p>
+        </div>
+
+        <!-- 8 Sandal -->
+        <div class="group cursor-pointer" data-gallery-item data-category="sandal" data-gallery-title="Sandal Kulit Pria"
+             data-large-src="https://images.unsplash.com/photo-1595950653106-6c9ebd614d3a?w=1200">
+          <div class="relative overflow-hidden rounded-lg shadow-lg">
+            <img src="https://images.unsplash.com/photo-1595950653106-6c9ebd614d3a?w=400" alt="Sandal Pria"
+                 class="w-full h-64 object-cover group-hover:scale-110 transition-transform duration-300">
+            <div class="absolute inset-0 bg-black bg-opacity-0 group-hover:bg-opacity-30 transition-all duration-300 flex items-center justify-center">
+              <i class="fas fa-search-plus text-white text-2xl opacity-0 group-hover:opacity-100 transition-opacity duration-300"></i>
+            </div>
+          </div>
+          <p class="text-center mt-2 text-gray-700 font-medium">Sandal Kulit Pria</p>
+        </div>
+
+        <!-- 9 Casual -->
+        <div class="group cursor-pointer" data-gallery-item data-category="casual" data-gallery-title="Koleksi Terbaru"
+             data-large-src="https://images.unsplash.com/photo-1556906781-9a412961c28c?w=1200">
+          <div class="relative overflow-hidden rounded-lg shadow-lg">
+            <img src="https://images.unsplash.com/photo-1556906781-9a412961c28c?w=400" alt="Koleksi Sepatu"
+                 class="w-full h-64 object-cover group-hover:scale-110 transition-transform duration-300">
+            <div class="absolute inset-0 bg-black bg-opacity-0 group-hover:bg-opacity-30 transition-all duration-300 flex items-center justify-center">
+              <i class="fas fa-search-plus text-white text-2xl opacity-0 group-hover:opacity-100 transition-opacity duration-300"></i>
+            </div>
+          </div>
+          <p class="text-center mt-2 text-gray-700 font-medium">Koleksi Terbaru</p>
+        </div>
+
+        <!-- 10 Boots -->
+        <div class="group cursor-pointer" data-gallery-item data-category="boots" data-gallery-title="Boots Tinggi Klasik"
+             data-large-src="https://images.unsplash.com/photo-1603808033192-082d6919d3e1?w=1200">
+          <div class="relative overflow-hidden rounded-lg shadow-lg">
+            <img src="https://images.unsplash.com/photo-1603808033192-082d6919d3e1?w=400" alt="Boots Tinggi"
+                 class="w-full h-64 object-cover group-hover:scale-110 transition-transform duration-300">
+            <div class="absolute inset-0 bg-black bg-opacity-0 group-hover:bg-opacity-30 transition-all duration-300 flex items-center justify-center">
+              <i class="fas fa-search-plus text-white text-2xl opacity-0 group-hover:opacity-100 transition-opacity duration-300"></i>
+            </div>
+          </div>
+          <p class="text-center mt-2 text-gray-700 font-medium">Boots Tinggi Klasik</p>
+        </div>
+
+        <!-- 11 Formal (Wanita) -->
+        <div class="group cursor-pointer" data-gallery-item data-category="formal" data-gallery-title="Sepatu Wanita Elegan"
+             data-large-src="https://images.unsplash.com/photo-1600185365483-26d7a4cc7519?w=1200">
+          <div class="relative overflow-hidden rounded-lg shadow-lg">
+            <img src="https://images.unsplash.com/photo-1600185365483-26d7a4cc7519?w=400" alt="Sepatu Wanita"
+                 class="w-full h-64 object-cover group-hover:scale-110 transition-transform duration-300">
+            <div class="absolute inset-0 bg-black bg-opacity-0 group-hover:bg-opacity-30 transition-all duration-300 flex items-center justify-center">
+              <i class="fas fa-search-plus text-white text-2xl opacity-0 group-hover:opacity-100 transition-opacity duration-300"></i>
+            </div>
+          </div>
+          <p class="text-center mt-2 text-gray-700 font-medium">Sepatu Wanita Elegan</p>
+        </div>
+
+        <!-- 12 Sneakers -->
+        <div class="group cursor-pointer" data-gallery-item data-category="casual" data-gallery-title="Sneakers Meksiko"
+             data-large-src="https://images.unsplash.com/photo-1542291026-7eec264c27ff?w=1200">
+          <div class="relative overflow-hidden rounded-lg shadow-lg">
+            <img src="https://images.unsplash.com/photo-1542291026-7eec264c27ff?w=400" alt="Sneakers"
+                 class="w-full h-64 object-cover group-hover:scale-110 transition-transform duration-300">
+            <div class="absolute inset-0 bg-black bg-opacity-0 group-hover:bg-opacity-30 transition-all duration-300 flex items-center justify-center">
+              <i class="fas fa-search-plus text-white text-2xl opacity-0 group-hover:opacity-100 transition-opacity duration-300"></i>
+            </div>
+          </div>
+          <p class="text-center mt-2 text-gray-700 font-medium">Sneakers Meksiko</p>
+        </div>
+
+      </div>
+    </div>
+
+    <!-- Modal markup is created/managed by JS (so we don't duplicate here) -->
+
+</section>
+
+  <!-- Footer (sama seperti sebelumnya) -->
+  <footer class="bg-gray-800 text-white py-12">
+    <div class="max-w-7xl mx-auto px-4">
+      <div class="grid md:grid-cols-4 gap-8">
+        <div>
+          <div class="flex items-center mb-4">
+            <i class="fas fa-shoe-prints text-red-600 text-2xl mr-2"></i>
+            <span class="text-xl font-bold">Zapatos México</span>
+          </div>
+          <p class="text-gray-400">Toko sepatu Meksiko terpercaya dengan koleksi lengkap dan kualitas terbaik.</p>
+        </div>
+        <div>
+          <h3 class="text-lg font-semibold mb-4">Menu</h3>
+          <ul class="space-y-2">
+            <li><a href="index.html" class="text-gray-400 hover:text-white">Beranda</a></li>
+            <li><a href="produk.html" class="text-gray-400 hover:text-white">Produk</a></li>
+            <li><a href="tentang.html" class="text-gray-400 hover:text-white">Tentang Kami</a></li>
+            <li><a href="kontak.html" class="text-gray-400 hover:text-white">Kontak</a></li>
+          </ul>
+        </div>
+        <div>
+          <h3 class="text-lg font-semibold mb-4">Kontak</h3>
+          <ul class="space-y-2 text-gray-400">
+            <li><i class="fas fa-phone mr-2"></i> +62 812-3456-7890</li>
+            <li><i class="fas fa-envelope mr-2"></i> info@zapatosmexico.com</li>
+            <li><i class="fas fa-map-marker-alt mr-2"></i> Jakarta, Indonesia</li>
+          </ul>
+        </div>
+        <div>
+          <h3 class="text-lg font-semibold mb-4">Ikuti Kami</h3>
+          <div class="flex space-x-4">
+            <a href="#" class="text-gray-400 hover:text-white text-xl"><i class="fab fa-facebook"></i></a>
+            <a href="#" class="text-gray-400 hover:text-white text-xl"><i class="fab fa-instagram"></i></a>
+            <a href="#" class="text-gray-400 hover:text-white text-xl"><i class="fab fa-whatsapp"></i></a>
+          </div>
+        </div>
+      </div>
+
+      <div class="border-t border-gray-700 mt-8 pt-8 text-center text-gray-400">
+        <p>© 2024 Zapatos México. All rights reserved.</p>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Gallery script (simpan file ini sebagai js/gallery.js) -->
+  <script src="js/gallery.js" defer></script>
+</body>
+</html>

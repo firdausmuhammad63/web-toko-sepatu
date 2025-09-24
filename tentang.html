@@ -1,0 +1,264 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tentang Kami - Zapatos México</title>
+    <meta name="description" content="Sejarah dan visi misi Zapatos México sebagai distributor sepatu Meksiko terpercaya di Indonesia. Komitmen kualitas dan kepuasan pelanggan.">
+    <link rel="stylesheet" href="dist/output.css">
+    <script src="https://unpkg.com/alpinejs@3.x.x/dist/cdn.min.js" defer></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body class="bg-gray-50">
+    <!-- Navigation -->
+    <nav class="bg-white shadow-lg fixed w-full z-50" x-data="{ open: false }">
+        <div class="max-w-7xl mx-auto px-4">
+            <div class="flex justify-between items-center py-4">
+                <div class="flex items-center">
+                    <i class="fas fa-shoe-prints text-red-600 text-2xl mr-2"></i>
+                    <span class="text-2xl font-bold text-gray-800">Zapatos México</span>
+                </div>
+                
+                <div class="hidden md:flex space-x-8">
+                    <a href="index.html" class="text-gray-700 hover:text-red-600 transition">Beranda</a>
+                    <a href="produk.html" class="text-gray-700 hover:text-red-600 transition">Produk</a>
+                    <a href="tentang.html" class="text-red-600 font-semibold">Tentang</a>
+                    <a href="galeri.html" class="text-gray-700 hover:text-red-600 transition">Galeri</a>
+                    <a href="kontak.html" class="text-gray-700 hover:text-red-600 transition">Kontak</a>
+                </div>
+
+                <button @click="open = !open" class="md:hidden">
+                    <i class="fas fa-bars text-2xl"></i>
+                </button>
+            </div>
+
+            <div x-show="open" class="md:hidden pb-4">
+                <a href="index.html" class="block py-2 text-gray-700 hover:text-red-600">Beranda</a>
+                <a href="produk.html" class="block py-2 text-gray-700 hover:text-red-600">Produk</a>
+                <a href="tentang.html" class="block py-2 text-red-600 font-semibold">Tentang</a>
+                <a href="galeri.html" class="block py-2 text-gray-700 hover:text-red-600">Galeri</a>
+                <a href="kontak.html" class="block py-2 text-gray-700 hover:text-red-600">Kontak</a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Header -->
+    <section class="pt-24 pb-12 bg-gradient-to-r from-red-600 to-orange-500 text-white">
+        <div class="max-w-7xl mx-auto px-4 text-center">
+            <h1 class="text-4xl font-bold mb-4">Tentang Zapatos México</h1>
+            <p class="text-xl opacity-90">Perjalanan kami dalam menghadirkan sepatu Meksiko berkualitas</p>
+        </div>
+    </section>
+
+    <!-- Story Section -->
+    <section class="py-16 bg-white">
+        <div class="max-w-7xl mx-auto px-4">
+            <div class="grid md:grid-cols-2 gap-12 items-center">
+                <div>
+                    <h2 class="text-3xl font-bold text-gray-800 mb-6">Cerita Kami</h2>
+                    <p class="text-gray-600 mb-4">
+                        Zapatos México didirikan pada tahun 2018 dengan visi untuk menghadirkan sepatu Meksiko berkualitas tinggi ke Indonesia. Berawal dari kecintaan pendiri kami terhadap kerajinan kulit tradisional Meksiko, kami berkomitmen untuk menyediakan produk-produk autentik dengan standar kualitas internasional.
+                    </p>
+                    <p class="text-gray-600 mb-4">
+                        Setiap sepatu yang kami jual dipilih langsung dari pengrajin terbaik di Meksiko, memastikan kualitas kulit asli dan keahlian pembuatan yang telah diwariskan turun-temurun. Kami percaya bahwa sepatu bukan hanya pelindung kaki, tetapi juga cerminan kepribadian dan gaya hidup.
+                    </p>
+                    <p class="text-gray-600">
+                        Hingga saat ini, kami telah melayani ribuan pelanggan di seluruh Indonesia dan terus berkomitmen untuk memberikan produk terbaik dengan pelayanan yang memuaskan.
+                    </p>
+                </div>
+                <div>
+                    <img src="https://images.unsplash.com/photo-1556906781-9a412961c28c?w=600" alt="Tentang Kami" class="rounded-lg shadow-lg">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Vision Mission -->
+    <section class="py-16 bg-gray-50">
+        <div class="max-w-7xl mx-auto px-4">
+            <div class="text-center mb-12">
+                <h2 class="text-3xl font-bold text-gray-800 mb-4">Visi & Misi</h2>
+            </div>
+
+            <div class="grid md:grid-cols-2 gap-8">
+                <div class="bg-white p-8 rounded-lg shadow-lg">
+                    <div class="text-center mb-6">
+                        <div class="bg-red-100 w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4">
+                            <i class="fas fa-eye text-red-600 text-2xl"></i>
+                        </div>
+                        <h3 class="text-2xl font-bold text-gray-800">Visi</h3>
+                    </div>
+                    <p class="text-gray-600 text-center">
+                        Menjadi distributor sepatu Meksiko terdepan di Indonesia yang dikenal karena kualitas produk premium dan pelayanan terbaik, serta melestarikan warisan budaya kerajinan kulit tradisional Meksiko.
+                    </p>
+                </div>
+
+                <div class="bg-white p-8 rounded-lg shadow-lg">
+                    <div class="text-center mb-6">
+                        <div class="bg-blue-100 w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4">
+                            <i class="fas fa-bullseye text-blue-600 text-2xl"></i>
+                        </div>
+                        <h3 class="text-2xl font-bold text-gray-800">Misi</h3>
+                    </div>
+                    <ul class="text-gray-600 space-y-2">
+                        <li>• Menyediakan sepatu Meksiko berkualitas tinggi dengan harga terjangkau</li>
+                        <li>• Memberikan pelayanan pelanggan yang excellent</li>
+                        <li>• Mendukung pengrajin lokal Meksiko</li>
+                        <li>• Membangun kepercayaan melalui transparansi dan integritas</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Values -->
+    <section class="py-16 bg-white">
+        <div class="max-w-7xl mx-auto px-4">
+            <div class="text-center mb-12">
+                <h2 class="text-3xl font-bold text-gray-800 mb-4">Nilai-Nilai Kami</h2>
+                <p class="text-xl text-gray-600">Prinsip yang memandu setiap langkah kami</p>
+            </div>
+
+            <div class="grid md:grid-cols-4 gap-8">
+                <div class="text-center">
+                    <div class="bg-red-100 w-20 h-20 rounded-full flex items-center justify-center mx-auto mb-4">
+                        <i class="fas fa-gem text-red-600 text-3xl"></i>
+                    </div>
+                    <h3 class="text-xl font-semibold mb-2">Kualitas</h3>
+                    <p class="text-gray-600">Hanya produk terbaik yang layak untuk pelanggan kami</p>
+                </div>
+
+                <div class="text-center">
+                    <div class="bg-green-100 w-20 h-20 rounded-full flex items-center justify-center mx-auto mb-4">
+                        <i class="fas fa-heart text-green-600 text-3xl"></i>
+                    </div>
+                    <h3 class="text-xl font-semibold mb-2">Kepercayaan</h3>
+                    <p class="text-gray-600">Membangun hubungan jangka panjang dengan pelanggan</p>
+                </div>
+
+                <div class="text-center">
+                    <div class="bg-blue-100 w-20 h-20 rounded-full flex items-center justify-center mx-auto mb-4">
+                        <i class="fas fa-users text-blue-600 text-3xl"></i>
+                    </div>
+                    <h3 class="text-xl font-semibold mb-2">Pelayanan</h3>
+                    <p class="text-gray-600">Mengutamakan kepuasan dan kenyamanan pelanggan</p>
+                </div>
+
+                <div class="text-center">
+                    <div class="bg-yellow-100 w-20 h-20 rounded-full flex items-center justify-center mx-auto mb-4">
+                        <i class="fas fa-lightbulb text-yellow-600 text-3xl"></i>
+                    </div>
+                    <h3 class="text-xl font-semibold mb-2">Inovasi</h3>
+                    <p class="text-gray-600">Terus berinovasi untuk memberikan yang terbaik</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Team Section -->
+    <section class="py-16 bg-gray-50">
+        <div class="max-w-7xl mx-auto px-4">
+            <div class="text-center mb-12">
+                <h2 class="text-3xl font-bold text-gray-800 mb-4">Tim Kami</h2>
+                <p class="text-xl text-gray-600">Orang-orang hebat di balik kesuksesan Zapatos México</p>
+            </div>
+
+            <div class="grid md:grid-cols-3 gap-8">
+                <div class="bg-white p-6 rounded-lg shadow-lg text-center">
+                    <div class="w-24 h-24 bg-gray-300 rounded-full mx-auto mb-4"></div>
+                    <h3 class="text-xl font-semibold mb-2">Carlos Rodriguez</h3>
+                    <p class="text-red-600 font-medium mb-2">Founder & CEO</p>
+                    <p class="text-gray-600 text-sm">Berpengalaman 15 tahun di industri sepatu dan fashion</p>
+                </div>
+
+                <div class="bg-white p-6 rounded-lg shadow-lg text-center">
+                    <div class="w-24 h-24 bg-gray-300 rounded-full mx-auto mb-4"></div>
+                    <h3 class="text-xl font-semibold mb-2">Maria Santos</h3>
+                    <p class="text-red-600 font-medium mb-2">Head of Operations</p>
+                    <p class="text-gray-600 text-sm">Ahli dalam manajemen supply chain dan quality control</p>
+                </div>
+
+                <div class="bg-white p-6 rounded-lg shadow-lg text-center">
+                    <div class="w-24 h-24 bg-gray-300 rounded-full mx-auto mb-4"></div>
+                    <h3 class="text-xl font-semibold mb-2">Ahmad Wijaya</h3>
+                    <p class="text-red-600 font-medium mb-2">Customer Relations Manager</p>
+                    <p class="text-gray-600 text-sm">Berdedikasi memberikan pelayanan terbaik untuk pelanggan</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Stats Section -->
+    <section class="py-16 bg-red-600 text-white">
+        <div class="max-w-7xl mx-auto px-4">
+            <div class="grid md:grid-cols-4 gap-8 text-center">
+                <div>
+                    <div class="text-4xl font-bold mb-2">5000+</div>
+                    <p class="text-xl opacity-90">Pelanggan Puas</p>
+                </div>
+                <div>
+                    <div class="text-4xl font-bold mb-2">150+</div>
+                    <p class="text-xl opacity-90">Produk Tersedia</p>
+                </div>
+                <div>
+                    <div class="text-4xl font-bold mb-2">6</div>
+                    <p class="text-xl opacity-90">Tahun Pengalaman</p>
+                </div>
+                <div>
+                    <div class="text-4xl font-bold mb-2">99%</div>
+                    <p class="text-xl opacity-90">Tingkat Kepuasan</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-gray-800 text-white py-12">
+        <div class="max-w-7xl mx-auto px-4">
+            <div class="grid md:grid-cols-4 gap-8">
+                <div>
+                    <div class="flex items-center mb-4">
+                        <i class="fas fa-shoe-prints text-red-600 text-2xl mr-2"></i>
+                        <span class="text-xl font-bold">Zapatos México</span>
+                    </div>
+                    <p class="text-gray-400">
+                        Toko sepatu Meksiko terpercaya dengan koleksi lengkap dan kualitas terbaik.
+                    </p>
+                </div>
+
+                <div>
+                    <h3 class="text-lg font-semibold mb-4">Menu</h3>
+                    <ul class="space-y-2">
+                        <li><a href="index.html" class="text-gray-400 hover:text-white">Beranda</a></li>
+                        <li><a href="produk.html" class="text-gray-400 hover:text-white">Produk</a></li>
+                        <li><a href="galeri.html" class="text-gray-400 hover:text-white">Galeri</a></li>
+                        <li><a href="kontak.html" class="text-gray-400 hover:text-white">Kontak</a></li>
+                    </ul>
+                </div>
+
+                <div>
+                    <h3 class="text-lg font-semibold mb-4">Kontak</h3>
+                    <ul class="space-y-2 text-gray-400">
+                        <li><i class="fas fa-phone mr-2"></i> +62 812-3456-7890</li>
+                        <li><i class="fas fa-envelope mr-2"></i> info@zapatosmexico.com</li>
+                        <li><i class="fas fa-map-marker-alt mr-2"></i> Jakarta, Indonesia</li>
+                    </ul>
+                </div>
+
+                <div>
+                    <h3 class="text-lg font-semibold mb-4">Ikuti Kami</h3>
+                    <div class="flex space-x-4">
+                        <a href="#" class="text-gray-400 hover:text-white text-xl"><i class="fab fa-facebook"></i></a>
+                        <a href="#" class="text-gray-400 hover:text-white text-xl"><i class="fab fa-instagram"></i></a>
+                        <a href="#" class="text-gray-400 hover:text-white text-xl"><i class="fab fa-whatsapp"></i></a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="border-t border-gray-700 mt-8 pt-8 text-center text-gray-400">
+                <p>© 2024 Zapatos México. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+</body>
+</html>

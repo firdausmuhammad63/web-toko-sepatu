@@ -1,0 +1,278 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Zapatos México - Toko Sepatu Meksiko Terbaik di Indonesia</title>
+    <meta name="description" content="Toko sepatu Meksiko terlengkap dengan koleksi sepatu kulit berkualitas tinggi, boots, dan sandal tradisional Meksiko. Harga terjangkau, kualitas premium.">
+    <meta name="keywords" content="sepatu meksiko, boots meksiko, sepatu kulit, toko sepatu, zapatos, mexican shoes">
+    <link rel="stylesheet" href="dist/output.css">
+    <script src="https://unpkg.com/alpinejs@3.x.x/dist/cdn.min.js" defer></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body class="bg-gray-50">
+    <!-- Navigation -->
+    <nav class="bg-white shadow-lg fixed w-full z-50" x-data="{ open: false }">
+        <div class="max-w-7xl mx-auto px-4">
+            <div class="flex justify-between items-center py-4">
+                <div class="flex items-center">
+                    <i class="fas fa-shoe-prints text-red-600 text-2xl mr-2"></i>
+                    <span class="text-2xl font-bold text-gray-800">Zapatos México</span>
+                </div>
+                
+                <!-- Desktop Menu -->
+                <div class="hidden md:flex space-x-8">
+                    <a href="#home" class="text-gray-700 hover:text-red-600 transition">Beranda</a>
+                    <a href="produk.html" class="text-gray-700 hover:text-red-600 transition">Produk</a>
+                    <a href="tentang.html" class="text-gray-700 hover:text-red-600 transition">Tentang</a>
+                    <a href="galeri.html" class="text-gray-700 hover:text-red-600 transition">Galeri</a>
+                    <a href="kontak.html" class="text-gray-700 hover:text-red-600 transition">Kontak</a>
+                </div>
+
+                <!-- Mobile Menu Button -->
+                <button @click="open = !open" class="md:hidden">
+                    <i class="fas fa-bars text-2xl"></i>
+                </button>
+            </div>
+
+            <!-- Mobile Menu -->
+            <div x-show="open" class="md:hidden pb-4">
+                <a href="#home" class="block py-2 text-gray-700 hover:text-red-600">Beranda</a>
+                <a href="produk.html" class="block py-2 text-gray-700 hover:text-red-600">Produk</a>
+                <a href="tentang.html" class="block py-2 text-gray-700 hover:text-red-600">Tentang</a>
+                <a href="galeri.html" class="block py-2 text-gray-700 hover:text-red-600">Galeri</a>
+                <a href="kontak.html" class="block py-2 text-gray-700 hover:text-red-600">Kontak</a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section id="home" class="pt-20 bg-gradient-to-r from-red-600 to-orange-500 text-white">
+        <div class="max-w-7xl mx-auto px-4 py-20">
+            <div class="grid md:grid-cols-2 gap-12 items-center">
+                <div class="space-y-6">
+                    <h1 class="text-5xl font-bold leading-tight">
+                        Sepatu Meksiko <span class="text-yellow-300">Berkualitas Tinggi</span>
+                    </h1>
+                    <p class="text-xl opacity-90">
+                        Koleksi sepatu kulit asli Meksiko dengan desain tradisional dan modern. 
+                        Kualitas premium, harga terjangkau.
+                    </p>
+                    <div class="flex flex-col sm:flex-row gap-4">
+                        <a href="produk.html" class="bg-white text-red-600 px-8 py-3 rounded-lg font-semibold hover:bg-gray-100 transition text-center">
+                            Lihat Produk
+                        </a>
+                        <a href="kontak.html" class="border-2 border-white px-8 py-3 rounded-lg font-semibold hover:bg-white hover:text-red-600 transition text-center">
+                            Hubungi Kami
+                        </a>
+                    </div>
+                </div>
+                <div class="text-center">
+                    <img src="https://images.unsplash.com/photo-1549298916-b41d501d3772?w=500" alt="Sepatu Meksiko" class="rounded-lg shadow-2xl mx-auto">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Features Section -->
+    <section class="py-20 bg-white">
+        <div class="max-w-7xl mx-auto px-4">
+            <div class="text-center mb-16">
+                <h2 class="text-4xl font-bold text-gray-800 mb-4">Mengapa Pilih Kami?</h2>
+                <p class="text-xl text-gray-600">Keunggulan yang membuat kami berbeda</p>
+            </div>
+
+            <div class="grid md:grid-cols-3 gap-8">
+                <div class="text-center p-6 rounded-lg hover:shadow-lg transition">
+                    <div class="bg-red-100 w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4">
+                        <i class="fas fa-certificate text-red-600 text-2xl"></i>
+                    </div>
+                    <h3 class="text-xl font-semibold mb-2">Kualitas Premium</h3>
+                    <p class="text-gray-600">Sepatu kulit asli dengan standar kualitas internasional</p>
+                </div>
+
+                <div class="text-center p-6 rounded-lg hover:shadow-lg transition">
+                    <div class="bg-green-100 w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4">
+                        <i class="fas fa-shipping-fast text-green-600 text-2xl"></i>
+                    </div>
+                    <h3 class="text-xl font-semibold mb-2">Pengiriman Cepat</h3>
+                    <p class="text-gray-600">Gratis ongkir ke seluruh Indonesia untuk pembelian minimal</p>
+                </div>
+
+                <div class="text-center p-6 rounded-lg hover:shadow-lg transition">
+                    <div class="bg-blue-100 w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4">
+                        <i class="fas fa-handshake text-blue-600 text-2xl"></i>
+                    </div>
+                    <h3 class="text-xl font-semibold mb-2">Garansi Kepuasan</h3>
+                    <p class="text-gray-600">Jaminan uang kembali 100% jika tidak puas</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Products Preview -->
+    <section class="py-20 bg-gray-50">
+        <div class="max-w-7xl mx-auto px-4">
+            <div class="text-center mb-16">
+                <h2 class="text-4xl font-bold text-gray-800 mb-4">Produk Unggulan</h2>
+                <p class="text-xl text-gray-600">Koleksi terbaik sepatu Meksiko kami</p>
+            </div>
+
+            <div class="grid md:grid-cols-3 gap-8">
+                <div class="bg-white rounded-lg shadow-lg overflow-hidden hover:shadow-xl transition">
+                    <img src="https://images.unsplash.com/photo-1608256246200-53e635b5b65f?w=400" alt="Boots Cowboy" class="w-full h-64 object-cover">
+                    <div class="p-6">
+                        <h3 class="text-xl font-semibold mb-2">Boots Cowboy Klasik</h3>
+                        <p class="text-gray-600 mb-4">Sepatu boots kulit asli dengan desain cowboy tradisional Meksiko</p>
+                        <div class="flex justify-between items-center">
+                            <span class="text-2xl font-bold text-red-600">Rp 850.000</span>
+                            <button class="bg-red-600 text-white px-4 py-2 rounded hover:bg-red-700 transition">
+                                Detail
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="bg-white rounded-lg shadow-lg overflow-hidden hover:shadow-xl transition">
+                    <img src="https://images.unsplash.com/photo-1560769629-975ec94e6a86?w=400" alt="Sepatu Formal" class="w-full h-64 object-cover">
+                    <div class="p-6">
+                        <h3 class="text-xl font-semibold mb-2">Sepatu Formal Meksiko</h3>
+                        <p class="text-gray-600 mb-4">Sepatu formal kulit premium untuk acara resmi dan bisnis</p>
+                        <div class="flex justify-between items-center">
+                            <span class="text-2xl font-bold text-red-600">Rp 750.000</span>
+                            <button class="bg-red-600 text-white px-4 py-2 rounded hover:bg-red-700 transition">
+                                Detail
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="bg-white rounded-lg shadow-lg overflow-hidden hover:shadow-xl transition">
+                    <img src="https://images.unsplash.com/photo-1551107696-a4b0c5a0d9a2?w=400" alt="Sandal Tradisional" class="w-full h-64 object-cover">
+                    <div class="p-6">
+                        <h3 class="text-xl font-semibold mb-2">Sandal Huarache</h3>
+                        <p class="text-gray-600 mb-4">Sandal tradisional Meksiko yang nyaman untuk aktivitas sehari-hari</p>
+                        <div class="flex justify-between items-center">
+                            <span class="text-2xl font-bold text-red-600">Rp 450.000</span>
+                            <button class="bg-red-600 text-white px-4 py-2 rounded hover:bg-red-700 transition">
+                                Detail
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="text-center mt-12">
+                <a href="produk.html" class="bg-red-600 text-white px-8 py-3 rounded-lg font-semibold hover:bg-red-700 transition">
+                    Lihat Semua Produk
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Testimonials -->
+    <section class="py-20 bg-white">
+        <div class="max-w-7xl mx-auto px-4">
+            <div class="text-center mb-16">
+                <h2 class="text-4xl font-bold text-gray-800 mb-4">Testimoni Pelanggan</h2>
+                <p class="text-xl text-gray-600">Apa kata mereka tentang produk kami</p>
+            </div>
+
+            <div class="grid md:grid-cols-2 gap-8">
+                <div class="bg-gray-50 p-8 rounded-lg">
+                    <div class="flex items-center mb-4">
+                        <div class="flex text-yellow-400">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                        </div>
+                    </div>
+                    <p class="text-gray-600 mb-4 italic">
+                        "Kualitas sepatu sangat bagus, kulit asli dan nyaman dipakai. Pelayanan juga memuaskan!"
+                    </p>
+                    <div class="flex items-center">
+                        <div class="w-12 h-12 bg-gray-300 rounded-full mr-4"></div>
+                        <div>
+                            <h4 class="font-semibold">Ahmad Rizki</h4>
+                            <p class="text-gray-500 text-sm">Jakarta</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="bg-gray-50 p-8 rounded-lg">
+                    <div class="flex items-center mb-4">
+                        <div class="flex text-yellow-400">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                        </div>
+                    </div>
+                    <p class="text-gray-600 mb-4 italic">
+                        "Boots cowboy yang saya beli sangat berkualitas. Desainnya autentik dan tahan lama."
+                    </p>
+                    <div class="flex items-center">
+                        <div class="w-12 h-12 bg-gray-300 rounded-full mr-4"></div>
+                        <div>
+                            <h4 class="font-semibold">Maria Sari</h4>
+                            <p class="text-gray-500 text-sm">Surabaya</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-gray-800 text-white py-12">
+        <div class="max-w-7xl mx-auto px-4">
+            <div class="grid md:grid-cols-4 gap-8">
+                <div>
+                    <div class="flex items-center mb-4">
+                        <i class="fas fa-shoe-prints text-red-600 text-2xl mr-2"></i>
+                        <span class="text-xl font-bold">Zapatos México</span>
+                    </div>
+                    <p class="text-gray-400">
+                        Toko sepatu Meksiko terpercaya dengan koleksi lengkap dan kualitas terbaik.
+                    </p>
+                </div>
+
+                <div>
+                    <h3 class="text-lg font-semibold mb-4">Menu</h3>
+                    <ul class="space-y-2">
+                        <li><a href="produk.html" class="text-gray-400 hover:text-white">Produk</a></li>
+                        <li><a href="tentang.html" class="text-gray-400 hover:text-white">Tentang Kami</a></li>
+                        <li><a href="galeri.html" class="text-gray-400 hover:text-white">Galeri</a></li>
+                        <li><a href="kontak.html" class="text-gray-400 hover:text-white">Kontak</a></li>
+                    </ul>
+                </div>
+
+                <div>
+                    <h3 class="text-lg font-semibold mb-4">Kontak</h3>
+                    <ul class="space-y-2 text-gray-400">
+                        <li><i class="fas fa-phone mr-2"></i> +62 812-3456-7890</li>
+                        <li><i class="fas fa-envelope mr-2"></i> info@zapatosmexico.com</li>
+                        <li><i class="fas fa-map-marker-alt mr-2"></i> Jakarta, Indonesia</li>
+                    </ul>
+                </div>
+
+                <div>
+                    <h3 class="text-lg font-semibold mb-4">Ikuti Kami</h3>
+                    <div class="flex space-x-4">
+                        <a href="#" class="text-gray-400 hover:text-white text-xl"><i class="fab fa-facebook"></i></a>
+                        <a href="#" class="text-gray-400 hover:text-white text-xl"><i class="fab fa-instagram"></i></a>
+                        <a href="#" class="text-gray-400 hover:text-white text-xl"><i class="fab fa-whatsapp"></i></a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="border-t border-gray-700 mt-8 pt-8 text-center text-gray-400">
+                <p>© 2024 Zapatos México. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+</body>
+</html>
